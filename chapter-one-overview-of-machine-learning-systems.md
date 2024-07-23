@@ -35,11 +35,11 @@ The first thing that you need to get into your head is this: **ML IS NOT A MAGIC
 In fact, even for problems where ML can solve, ML solutions might not be the optimal solution.
 
 Hence, something important for you to do before starting an ML project is to ask:
-> **_Question_ :grey_question:** Whether ML is necessary or cost-effective
+> :question: **_Question_** Whether ML is necessary or cost-effective
 
 #### What ML can do?
 The following quote taken from the book summarizes it pretty well
-> **_Quote_** Machine learning is an approach to (1) learn (2) complex patterns from (3) existing data and use these patterns to make (4) predictions on (5) unseen data.
+> :memo: **_Quote_** Machine learning is an approach to (1) learn (2) complex patterns from (3) existing data and use these patterns to make (4) predictions on (5) unseen data.
 
 Diving into more details on each one of them:
 **1. Learn: the system has the capacity to learn** 
@@ -68,6 +68,8 @@ Whether a pattern exists might not be obvious, or if patterns exist, your datase
 **Fundamental Difference Between Traditional Software and Machine Learning**
 Perhaps, the most obvious difference between traditional software and that of machine learning is that instead of requiring hand-specified patterns to calculate outputs, ML solutions learn patterns from inputs and outputs.
 This is illustrated in this figure
+
+<img src="Assets/1-overview-of-machine-learning-systems-assets/traditional_software_vs_machine_learning.png" width="200" height="100">
 
 ![traditional_software_vs_machine_learning](Assets/1-overview-of-machine-learning-systems-assets/traditional_software_vs_machine_learning.png)
 
