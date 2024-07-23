@@ -21,8 +21,10 @@ Just to name a few, other critical aspects of the system would also be:
 ## Structure of chapter 1
 The first chapter of the book aims to give you an overview of what it takes to bring an ML model to production
 
-
-
+This chapter addresses the following: 
+1. address the fundamental question of when and when not to use ML
+2. discuss the challenges of deploying ML systems
+3. compare ML in research vs traditional software
 
 
 
