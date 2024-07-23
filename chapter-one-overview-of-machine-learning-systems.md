@@ -27,10 +27,13 @@ This chapter addresses the following:
 2. discuss the challenges of deploying ML systems
 3. compare ML in research vs traditional software
 
+## When to use/not use machine learning
 
+The first thing that you need to get into your head is this: **ML IS NOT A MAGIC TOOL THAT CAN SOLVE ALL PROBLEMS**
 
+In fact, even for problems where ML can solve, ML solutions might not be the optimal solution.
 
-
+Hence, something important for you to do before starting an ML project is to ask U+27AD;
 
 
 
