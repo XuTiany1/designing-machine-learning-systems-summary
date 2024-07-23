@@ -33,7 +33,9 @@ The first thing that you need to get into your head is this: **ML IS NOT A MAGIC
 
 In fact, even for problems where ML can solve, ML solutions might not be the optimal solution.
 
-Hence, something important for you to do before starting an ML project is to ask U+27AD;
+Hence, something important for you to do before starting an ML project is to ask &#8595; &#8595;
+
+> **_Question_ :grey_question:** Whether ML is necessary or cost-effective
 
 
 
