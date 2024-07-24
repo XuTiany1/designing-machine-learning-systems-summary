@@ -70,6 +70,7 @@ Whether a pattern exists might not be obvious, or if patterns exist, your datase
 **Fundamental Difference Between Traditional Software and Machine Learning**
 Perhaps, the most obvious difference between traditional software and that of machine learning is that instead of requiring hand-specified patterns to calculate outputs, ML solutions learn patterns from inputs and outputs.
 This is illustrated in this figure
+
 ![traditional_software_vs_machine_learning](Assets/1-overview-of-machine-learning-systems-assets/traditional_software_vs_machine_learning.png)
 
 **3. Existing data: data is available, or it’s possible to collect data** 
