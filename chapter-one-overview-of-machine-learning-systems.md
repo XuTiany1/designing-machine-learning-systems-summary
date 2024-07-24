@@ -157,13 +157,19 @@ According to Algorithmia’s 2020 state of enterprise machine learning survey, M
 
 ## Understanding ML Systems
 
+Here, the book goes into the difference between ML in research and ML in industry. 
 
+### Machine learning in reserach vs production
 
+ML in production is very different from ML in research. The table below shows five of the major differences.
 
-
-
-
-
+|                          | Production    | Research      |
+| -----------              | -----------   | ------------  |
+| Requirements             | 	State-of-the-art model performance on benchmark datasets  |  Different stakeholders have different requirements |
+| Computational Priority   | Fast training, high throughput | Fast inference, low latency  |
+|    Data    |    Static    |    Constantly shifting    |
+|   Fairness    |    Often not a focus    |    Must be considered    |
+|    Interpretability    |    Often not a focus    |    Must be considered    |
 
 
 
