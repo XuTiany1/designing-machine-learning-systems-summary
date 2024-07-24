@@ -139,6 +139,7 @@ Now,
 > :bulb: **NOTE** Enterprise ML applications tend to have vastly different requirements and considerations from consumer applications.
 
 |                        | Entreprise    | Consumer      |
+| -----------            | -----------   | ------------  |
 | Latency Requirement    | Low Emphasis  |  High Emphasis|
 | Accuracy Requirement   | High Emphasis | Low Emphasis  |
 
