@@ -130,7 +130,7 @@ Now, even if ML can’t solve your problem, it might be possible to break your p
 
 ## Typical ML use Cases
 
-### Consumer vs Industrial Market
+### Consumer vs Entreprise Focus in ML
 
 As of 2022, the date that this book is written, even though the market for consumer ML applications is booming, the majority of ML use cases are still in the enterprise world.
 
@@ -143,13 +143,19 @@ Now,
 | Latency Requirement    | Low Emphasis  |  High Emphasis|
 | Accuracy Requirement   | High Emphasis | Low Emphasis  |
 
+For most cases, enterprise applications might have stricter accuracy requirements but be more forgiving with latency requirements
 
-According to Algorithmia’s 2020 state of enterprise machine learning survey, ML applications in enterprises are diverse, serving both internal use cases (reducing costs, generating customer insights and intelligence, internal processing automation) and external use cases (improving customer experience, retaining customers, interacting with customers) as shown in 
-
-
-
+At the same time, latency of a second might get a consumer distracted and opening something else, but enterprise users might be more tolerant of high latency.
 
 
+### Entreprise use case
+
+According to Algorithmia’s 2020 state of enterprise machine learning survey, ML applications in enterprises are diverse, serving both internal use cases (reducing costs, generating customer insights and intelligence, internal processing automation) and external use cases (improving customer experience, retaining customers, interacting with customers) as shown in this figure below
+
+![entreprise_ml_use](Assets/1-overview-of-machine-learning-systems-assets/entreprise_ml_use.png)
+
+
+## Understanding ML Systems
 
 
 
