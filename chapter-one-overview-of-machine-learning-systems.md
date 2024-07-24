@@ -9,6 +9,7 @@ Well, most people (like me when I was reading this book) automatically connects 
 - Neural nets
 
 However.
+
 Algorithm is only a small part of ML system in production!
 
 Just to name a few, other critical aspects of the system would also be:
@@ -42,6 +43,7 @@ The following quote taken from the book summarizes it pretty well
 > :memo: **_Quote_** Machine learning is an approach to (1) learn (2) complex patterns from (3) existing data and use these patterns to make (4) predictions on (5) unseen data.
 
 Diving into more details on each one of them:
+
 **1. Learn: the system has the capacity to learn** 
 In most cases, ML systems learn from data.
 
@@ -68,36 +70,61 @@ Whether a pattern exists might not be obvious, or if patterns exist, your datase
 **Fundamental Difference Between Traditional Software and Machine Learning**
 Perhaps, the most obvious difference between traditional software and that of machine learning is that instead of requiring hand-specified patterns to calculate outputs, ML solutions learn patterns from inputs and outputs.
 This is illustrated in this figure
-
-![traditional_software_vs_machine_learning](Assets/1-overview-of-machine-learning-systems-assets/traditional_software_vs_machine_learning.png){ width="800" height="600" style="display: block; margin: 0 auto" }
-
-
-<img src="Assets/1-overview-of-machine-learning-systems-assets/traditional_software_vs_machine_learning.png" width="200" height="100">
-
 ![traditional_software_vs_machine_learning](Assets/1-overview-of-machine-learning-systems-assets/traditional_software_vs_machine_learning.png)
 
+**3. Existing data: data is available, or it’s possible to collect data** 
+
+Now, there are three types of learning possible and each depends on a different type/amount of data:
+
+1. Zero Shot learning (few-shot learning)
+    - Here, it’s possible for an ML system to make good predictions for a task without having been trained on data for that task. 
+    - However, this ML system was previously trained on data for other tasks, often related to the task in consideration.
+2. Continual Learning
+    - Here, we launch mL system without data
+    - They will learn from incoming data in production
+    - However, serving insufficiently trained models to users comes with certain risks, such as poor customer experience.
+3. Fake-it-til-you-make-it
+    - many companies follow a “fake-it-til-you make it” approach: launching a product that serves predictions made by humans, instead of ML models, with the hope of using the generated data to train ML models later.
+
+**4. Predictions: it’s a predictive problem** 
+- ML models make predictions, so they can only solve problems that require predictive answers
+
+> :bulb: **NOTE** Whatever question you might have, you can always frame it as: “What would the answer to this question be?” regardless of whether this question is about something in the future, the present, or even the past.
+
+Compute-intensive problems are one class of problems that have been very successfully reframed as predictive. Instead of computing the exact outcome of a process, which might be even more computationally costly and time-consuming than ML, you can frame the problem as: “What would the outcome of this process look like?” and approximate it using an ML model. The output will be an approximation of the exact output, but often, it’s good enough. You can see a lot of it in graphic renderings, such as image denoising and screen-space shading.
+
+**5. Unseen data: unseen data shares patterns with the training data** 
+- In technical terms, it means your unseen data and training data should come from similar distributions.
 
 
+#### In what tasks do ML excel at?
+Due to the way most ML algorithms today learn, ML solutions will especially shine if your problem has these additional following characteristics:
+
+1. HIGHLY REPETITIVE!
+
+2. Cost of wrong predictions is relatively low
+    - ML is especially suitable when the cost of a wrong prediction is low.
+    - If one prediction mistake can have catastrophic consequences, ML might still be a suitable solution if, on average, the benefits of correct predictions outweigh the cost of wrong predictions
+        - Consider self-driving cars as an example
+
+3. It’s at scale
+    - “At scale” means different things for different tasks, but, in general, it means making a lot of predictions.
+    - ML solutions often require nontrivial up-front investment on data, compute, infrastructure, and talent, so it’d make sense if we can use these solutions a lot.
+
+4. The patterns are constantly changing
+    - Figuring how your problem has changed so that you can update your handwritten rules accordingly can be too expensive or impossible. Because ML learns from data, you can update your ML model with new data without having to figure out how the data has changed.
 
 
+#### In what tasks should I avoid ML?
+Most of today’s ML algorithms shouldn’t be used under any of the following conditions:
 
+- It’s unethical. 
 
+- Simpler solutions do the trick. 
 
+- It’s not cost-effective.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Now, even if ML can’t solve your problem, it might be possible to break your problem into smaller components, and use ML to solve some of them.
 
 
 
