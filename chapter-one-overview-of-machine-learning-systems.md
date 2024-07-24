@@ -163,10 +163,10 @@ Here, the book goes into the difference between ML in research and ML in industr
 
 ML in production is very different from ML in research. The table below shows five of the major differences.
 
-|                          | Production    | Research      |
-| -----------              | -----------   | ------------  |
-| Requirements             | 	State-of-the-art model performance on benchmark datasets  |  Different stakeholders have different requirements |
-| Computational Priority   | Fast training, high throughput | Fast inference, low latency  |
+|              | Production    | Research      |
+| -----------  | -----------   | ------------  |
+| Requirements |    State-of-the-art model performance on benchmark datasets    |   Different stakeholders have different requirements    |
+|    Computational Priority    |    Fast training, high throughput    |    Fast inference, low latency   |
 |    Data    |    Static    |    Constantly shifting    |
 |   Fairness    |    Often not a focus    |    Must be considered    |
 |    Interpretability    |    Often not a focus    |    Must be considered    |
