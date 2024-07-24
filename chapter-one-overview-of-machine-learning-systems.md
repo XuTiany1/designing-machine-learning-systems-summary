@@ -30,7 +30,7 @@ This chapter addresses the following:
 
 ## When to use/not use machine learning
 
-#### What question to ask prior starting ML project?
+### What question to ask prior starting ML project?
 The first thing that you need to get into your head is this: **ML IS NOT A MAGIC TOOL THAT CAN SOLVE ALL PROBLEMS**
 
 In fact, even for problems where ML can solve, ML solutions might not be the optimal solution.
@@ -38,7 +38,7 @@ In fact, even for problems where ML can solve, ML solutions might not be the opt
 Hence, something important for you to do before starting an ML project is to ask:
 > :question: **_Question_** Whether ML is necessary or cost-effective
 
-#### What ML can do?
+### What ML can do?
 The following quote taken from the book summarizes it pretty well
 > :memo: **_Quote_** Machine learning is an approach to (1) learn (2) complex patterns from (3) existing data and use these patterns to make (4) predictions on (5) unseen data.
 
@@ -98,7 +98,7 @@ Compute-intensive problems are one class of problems that have been very success
 - In technical terms, it means your unseen data and training data should come from similar distributions.
 
 
-#### In what tasks do ML excel at?
+### In what tasks do ML excel at?
 Due to the way most ML algorithms today learn, ML solutions will especially shine if your problem has these additional following characteristics:
 
 1. HIGHLY REPETITIVE!
@@ -116,7 +116,7 @@ Due to the way most ML algorithms today learn, ML solutions will especially shin
     - Figuring how your problem has changed so that you can update your handwritten rules accordingly can be too expensive or impossible. Because ML learns from data, you can update your ML model with new data without having to figure out how the data has changed.
 
 
-#### In what tasks should I avoid ML?
+### In what tasks should I avoid ML?
 Most of today’s ML algorithms shouldn’t be used under any of the following conditions:
 
 - It’s unethical. 
@@ -127,6 +127,24 @@ Most of today’s ML algorithms shouldn’t be used under any of the following c
 
 Now, even if ML can’t solve your problem, it might be possible to break your problem into smaller components, and use ML to solve some of them.
 
+
+## Typical ML use Cases
+
+### Consumer vs Industrial Market
+
+As of 2022, the date that this book is written, even though the market for consumer ML applications is booming, the majority of ML use cases are still in the enterprise world.
+
+Now, 
+
+> :bulb: **NOTE** Enterprise ML applications tend to have vastly different requirements and considerations from consumer applications.
+
+|                        | Entreprise    | Consumer      |
+|                        |    :----:     |    :----:     |
+| Latency Requirement    | Low Emphasis  |  High Emphasis|
+| Accuracy Requirement   | High Emphasis | Low Emphasis  |
+
+
+According to Algorithmia’s 2020 state of enterprise machine learning survey, ML applications in enterprises are diverse, serving both internal use cases (reducing costs, generating customer insights and intelligence, internal processing automation) and external use cases (improving customer experience, retaining customers, interacting with customers) as shown in 
 
 
 
