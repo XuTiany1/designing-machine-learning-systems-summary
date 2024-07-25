@@ -172,13 +172,25 @@ ML in production is very different from ML in research. The table below shows fi
 |    Interpretability    |    Often not a focus    |    Must be considered    |
 
 
+### Understanding different stakeholders and requirements
+
+Coming from a research background, the goal is often simple: develop a model that achieves the state-of-the-art results on benchmark datasets
+
+Things changes when it comes to industry as we will have to consider the requirements from each individual stakeholders
+
+As an example, consider a mobile app that recommends restaurants to users, here the app makes money by charging restaurants a 10% service fee on each order.
+
+| Stakeholders Position | Main Concern   | 
+| -----------  | -----------   | 
+| ML Engineer | Want a model that recommends restaurants that users will most likely order from, and they believe they can do so by using a more complex model with more data. |
+| Sales Team | Wants a model that recommends the more expensive restaurants since these restaurants bring in more service fees. |
+| Product Team | Notices that every increase in latency leads to a drop in orders through the service, so they want a model that can return the recommended restaurants in less than 100 milliseconds. |
+| ML Platform Team |  As the traffic grows, this team has been woken up in the middle of the night because of problems with scaling their existing system, so they want to hold off on model updates to prioritize improving the ML platform. |
+| Manager |  Wants to maximize the margin, and one way to achieve this might be to let go of the ML team. |
 
 
 
-
-
-
-
+> :bulb: **NOTE** A simple rule in industry is: if a simple model can do a reasonable job, complex models must perform significantly better to justify the complexity.
 
 
 
