@@ -23,3 +23,32 @@ Lastly, the last part of this chapter touches on a debate that has consumed much
 
 
 
+
+
+
+## Business and ML Objectives
+
+### What is causing short-lived ML projects?
+Here is something that needs to be addressed straight out:
+>:small_red_triangle_down: most companies don’t care about the fancy ML metrics..... unless it moves some business metrics
+
+A pattern common in many short-lived ML projects is that the data scientists become too focused on hacking ML metrics without paying attention to business metrics
+
+As ML engineers, we should keep in mind that:
+- The ultimate goal of any project within a business is **to increase profits**, either directly or indirectly 
+For an ML project to succeed within a business organization, it’s crucial to tie the performance of an ML system to the overall business performance. What business performance metrics is the new ML system supposed to influence, e.g., the amount of ads revenue, the number of monthly active users?
+
+
+## Requirements for ML Systems
+
+### What is causing short-lived ML projects?
+
+
+
+
+
+
+
+
+
+
