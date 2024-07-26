@@ -2,8 +2,11 @@
 
 ## High level overview of chapter
 Ok.
+
 Quickly.
+
 When I tell you 'machine learning system', what do you think of?
+
 Well, most people (like me when I was reading this book) automatically connects with specific ML algorithms that can be used such as:
 - Logistic regression
 - Neural nets
