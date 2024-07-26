@@ -91,19 +91,30 @@ Hence, the following need to be emphasized for maintainability of the project:
 Data distributions and business requirements shift fast. Your system needs to be able to adapt to these natural shifts easily.
 
 
+## Iterative Process
+
+The main emphasis in this secion is: developing an ML system is an iterative and, in most cases, never-ending process. Once a system is put into production, it’ll need to be continually monitored and updated.
+
+This is best illustrated via figure below. 
+
+![ML_iterative_process](Assets/2-introduction-to-machine-learning-systems-design-assets/ML_iterative_process.png)
+
+The process can be summarized as follows:
+1. Step 1: Project Scoping
+    - laying out goals, objectives, and constraints
+2. Step 2: Data Engineering
+    - A vast majority of ML models today learn from data, so developing ML models starts with engineering data.
+3. Step 3: ML model developement
+    - With the initial set of training data, we’ll need to extract features and develop initial models leveraging these features
+4. Deployment:
+    - After a model is developed, it needs to be made accessible to users. 
+5. Monitoring and continual learning
+    - Once in production, models need to be monitored for performance decay and maintained to be adaptive to changing environments and changing requirements
+6. Business Analysis
+    - Model performance needs to be evaluated against business goals and analyzed to generate business insights
 
 
-
-
-
-
-
-
-
-
-
-
-
+## Framing ML Problems
 
 
 
