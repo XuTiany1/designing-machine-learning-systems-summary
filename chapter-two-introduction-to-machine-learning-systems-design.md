@@ -41,7 +41,90 @@ For an ML project to succeed within a business organization, it’s crucial to t
 
 ## Requirements for ML Systems
 
-### What is causing short-lived ML projects?
+### General Requirements
+
+Most successful ML systems need to satisfy the following four requirements (more could be needed):
+1. Reliability
+2. Scalability
+3. Maintainability
+4. Adaptability
+
+
+### Reliability
+The system should continue to perform the correct function at the desired level of performance even in the face of adversity (hardware or software faults, and even human error).
+
+Something to note here is:
+1. “Correctness” might be difficult to determine for ML systems. For example, your system might call the predict function—e.g., model.predict()—correctly, but the predictions are wrong.
+2. Unlike traditional software systems that often gets a runtime error / 404, **ML systems can fail silently**
+    - End users don’t even know that the system has failed and might have kept on using it as if it were working.
+
+
+
+### Scalability
+
+There are multiple ways an ML system can grow, but just to name a few:
+1. Grow in complexity -> simple model growing into 100-million-parameter neural net
+2. Grow in traffic volume -> 10, 000 daily prediction request into 10 million daily predictions
+3. Grow in ML models count -> first you only had a model to detect trending topics. Then you introduce a second model in that use case to filter out NSFW trending tweets.
+
+
+Whichever way your system grows, there should be reasonable ways of dealing with that growth.
+
+- When talking about scalability most people think of resource scaling, which consists of up-scaling (expanding the resources to handle growth) and down-scaling (reducing the resources when not needed).
+- Resource scaling is not the only concern in scalability; so is artifact management. When you have hundreds of models you need a repeatable and programmatic way to monitor, retrain and deploy a model. You can probably do all these manually if you only have a few.
+- The book touches more on the topic of scalability in other sections: Distributed Training, Model Optimisation, Resource Management, Experiment Tracking and Versioning, Development Environment.
+
+
+
+### Maintainability
+
+People of very different backgrounds, with very different programming languages and tools, and might own different parts of the process for a ML project. 
+
+Hence, the following need to be emphasized for maintainability of the project:
+- Code should be documented
+- Code, data, and artifacts should be versioned.
+- Models should be sufficiently reproducible so that even when the original authors are not around, other contributors can have sufficient contexts to build on their work. 
+- More on this topic in the "Team Structure section in Chapter 11".
+
+
+### Adaptability
+Data distributions and business requirements shift fast. Your system needs to be able to adapt to these natural shifts easily.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
