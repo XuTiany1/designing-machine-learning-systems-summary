@@ -116,10 +116,14 @@ The process can be summarized as follows:
 
 ## Framing ML Problems
 
+MOST business problems are not directly translatable into an ML problem. 
+
+Hence, it is your job as an ML engineer to use your knowledge of what problems ML can solve to **frame this request as an ML problem**.
 
 
-
-
+There are two things to consider when framing a problem: 
+1. the type of ML task you are going to use to model your problem
+2. the way you frame your objective function in problems that have multiple ML objectives.
 
 
 
