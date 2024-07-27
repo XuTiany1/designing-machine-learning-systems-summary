@@ -126,9 +126,13 @@ There are two things to consider when framing a problem:
 2. the way you frame your objective function in problems that have multiple ML objectives.
 
 
+### Types of ML Tasks
 
+The output of your model dictates the task type of your ML problem. 
 
+The most general types of ML tasks are classification and regression. A more general classification is outlined here:
 
+![ML_task_classification](Assets/2-introduction-to-machine-learning-systems-design-assets/ML_task_classification.png)
 
 
 
