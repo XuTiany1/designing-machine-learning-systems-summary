@@ -134,14 +134,18 @@ The most general types of ML tasks are classification and regression. A more gen
 
 ![ML_task_classification](Assets/2-introduction-to-machine-learning-systems-design-assets/ML_task_classification.png)
 
+#### Funky Relationship between Classification and Regression
+
+**A regression model can easily be framed as a classification model**
+
+>:bulb: For example, house prediction can become a classification task if we quantize the house prices into buckets such as under $100,000, $100,000–$200,000, $200,000–$500,000, and so forth and predict the bucket the house should be in.
 
 
+**A Classification model can easily be framed as a regression model**
 
+>:bulb: For example, the email classification model can become a regression model if we make it output values between 0 and 1, and decide on a threshold to determine which values should be SPAM (for example, if the value is above 0.5, the email is spam)
 
-
-
-
-
+![regression_vs_classification](Assets/2-introduction-to-machine-learning-systems-design-assets/regression_vs_classification.png)
 
 
 
