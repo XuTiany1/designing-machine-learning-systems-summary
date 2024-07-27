@@ -140,7 +140,7 @@ The most general types of ML tasks are classification and regression. A more gen
 - Multi-label: each observation can have more than one label. For example, a newspaper article could belong to both the Science and Economy labels. Multi-label classification problems are hard.
 - High cardinality multi-class that are also multi-label problems are very hard.
 
-### Funky relationship between classification and regression
+## Funky relationship between classification and regression
 
 **A regression model can easily be framed as a classification model**
 
@@ -154,7 +154,7 @@ The most general types of ML tasks are classification and regression. A more gen
 ![regression_vs_classification](Assets/2-introduction-to-machine-learning-systems-design-assets/regression_vs_classification.png)
 
 
-### Two Approaches to multilabel classification
+## Two Approaches to multilabel classification
 
 In general, there are two major approaches to tackle multilabel classification problems:
 
@@ -165,7 +165,7 @@ In general, there are two major approaches to tackle multilabel classification p
 > :bulb: **NOTE** This usually means training multiple binary classification models!
 
 
-### Importance in framing a problem properly
+## Importance in framing a problem properly
 
 > :memo: **Quote** Changing the way you frame your problem might make your problem significantly harder or easier.
 
