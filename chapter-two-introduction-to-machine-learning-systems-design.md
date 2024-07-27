@@ -20,7 +20,7 @@ Lastly, the last part of this chapter touches on a debate that has consumed much
 ## Key Takeaways
 
 
-
+1. Changing the way you frame your problem might make your problem significantly harder or easier.
 
 
 
@@ -41,7 +41,7 @@ For an ML project to succeed within a business organization, it’s crucial to t
 
 ## Requirements for ML Systems
 
-### General Requirements
+### General requirements
 
 Most successful ML systems need to satisfy the following four requirements (more could be needed):
 1. Reliability
@@ -134,27 +134,61 @@ The most general types of ML tasks are classification and regression. A more gen
 
 ![ML_task_classification](Assets/2-introduction-to-machine-learning-systems-design-assets/ML_task_classification.png)
 
-#### Funky Relationship between Classification and Regression
+- In classification, the fewer the clases there are, the simpler the problem. Binary classifiers are the simplest of all and they are widely used by ML practitioners.
+- Multi-class: there are more than 2 labels to choose from but each observation can only be assigned one label.
+- High cardinality: there are many labels to choose from. For example, diseases names. High cardinality problems are hard.
+- Multi-label: each observation can have more than one label. For example, a newspaper article could belong to both the Science and Economy labels. Multi-label classification problems are hard.
+- High cardinality multi-class that are also multi-label problems are very hard.
+
+#### Funky relationship between classification and regression
 
 **A regression model can easily be framed as a classification model**
 
->:bulb: For example, house prediction can become a classification task if we quantize the house prices into buckets such as under $100,000, $100,000–$200,000, $200,000–$500,000, and so forth and predict the bucket the house should be in.
+>:memo: **For example**, house prediction can become a classification task if we quantize the house prices into buckets such as under $100,000, $100,000–$200,000, $200,000–$500,000, and so forth and predict the bucket the house should be in.
 
 
 **A Classification model can easily be framed as a regression model**
 
->:bulb: For example, the email classification model can become a regression model if we make it output values between 0 and 1, and decide on a threshold to determine which values should be SPAM (for example, if the value is above 0.5, the email is spam)
+>:memo: **For example**, the email classification model can become a regression model if we make it output values between 0 and 1, and decide on a threshold to determine which values should be SPAM (for example, if the value is above 0.5, the email is spam)
 
 ![regression_vs_classification](Assets/2-introduction-to-machine-learning-systems-design-assets/regression_vs_classification.png)
 
 
+#### Two Approaches to multilabel classification
+In general, there are two major approaches to tackle multilabel classification problems:
+
+1. The first is to treat it as you would a multiclass classification.
+
+2. The second approach is to turn it into a set of binary classification problems.
+
+> :bulb: **NOTE** This usually means training multiple binary classification models!
 
 
+#### Importance in framing a problem properly
+
+> :memo: **Quote** Changing the way you frame your problem might make your problem significantly harder or easier.
+
+This will be illustrated via the following motivating example. 
+Consider the task of predicting what app a phone user wants to use next.
+
+**Naive and Bad Setup**
+A bad setup would be to frame this as a multiclass classification task where:
+- Input = {the user’s and environment’s features}
+- Ouput = { a vector of the size N, where N = number of apps to recommending to a user}
+
+![naive_bad_setup](Assets/2-introduction-to-machine-learning-systems-design-assets/naive_bad_setup.png)
+
+This is a bad approach because whenever a new app is added, you might have to retrain your model from scratch, or at least retrain all the components of your model whose number of parameters depends on N.
 
 
+**Better Appraoch -> Via Regerssion**
+A better approach is to frame this as a regression task.
+- Input = {user’s, the environment’s, **and the app’s features**}
+- Ouput = {a single value between 0 and 1; the higher the value, the more likely the user will open the app given the context.}
 
+In this framing, for a given user at a given time, there are N predictions to make, one for each app, but each prediction is just a number.
 
-
+![better_setup](Assets/2-introduction-to-machine-learning-systems-design-assets/better_setup.png)
 
 
 
