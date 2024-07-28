@@ -21,9 +21,11 @@ Lastly, the last part of this chapter touches on a debate that has consumed much
 
 
 1. Changing the way you frame your problem might make your problem significantly harder or easier.
-
-
-
+2. When there are multiple objectives, it’s a good idea to decouple them first because it makes model development and maintenance easier. 
+    - First, it’s easier to tweak your system without retraining models.
+    - Second, it’s easier for maintenance since different objectives might need different maintenance schedules.
+3. More data doesn’t always lead to better performance for your model. 
+    - More data at lower quality, such as data that is outdated or data with incorrect labels, might even hurt your model’s performance.
 
 
 ## Business and ML Objectives
@@ -182,7 +184,7 @@ A bad setup would be to frame this as a multiclass classification task where:
 This is a bad approach because whenever a new app is added, you might have to retrain your model from scratch, or at least retrain all the components of your model whose number of parameters depends on N.
 
 
-**Better Appraoch -> Via Regerssion**
+**Better Appraoch: Via Regerssion**
 A better approach is to frame this as a regression task.
 - Input = {user’s, the environment’s, **and the app’s features**}
 - Ouput = {a single value between 0 and 1; the higher the value, the more likely the user will open the app given the context.}
@@ -190,6 +192,48 @@ A better approach is to frame this as a regression task.
 In this framing, for a given user at a given time, there are N predictions to make, one for each app, but each prediction is just a number.
 
 ![better_setup](Assets/2-introduction-to-machine-learning-systems-design-assets/better_setup.png)
+
+
+## Choose Objective Functions via Decoupling Objectives**
+
+To learn, an ML model needs an objective function to guide the learning process. (AKA loss function)
+
+The challenge lies in when you want to: **minimize multiple objective functions**
+
+There are two fundamental appraoches to this:
+1. Train one model and modify the loss function
+>:bulb: **For Example**, imagine you want to minimize objective_A_loss and objective_B_loss. Then, you would train one model with the following loss:  **loss = (alpha)(objective_A_loss)+  (beta)(objective_B_loss)**
+2. Train multiple models(one for each loss function) and then modify the combined loss score
+>:bulb: **For Example**, Same example as above Then, you would train two model: objective_A_model, objective_B_model. Then, you will combine the scores as such: **score = (alpha)(objective_A_model_score)+  (beta)(objective_B_model_score)**
+
+
+## Mind Vs Data
+
+Progress in the last decade shows that the success of an ML system depends largely on the data it was trained on.
+
+Instead of focusing on improving ML algorithms, most companies focus on managing and improving their data.
+
+Despite the success of models using massive amounts of data, many are skeptical of the emphasis on data as the way forward.
+
+|                        | Mind Camp    | Data Camp      |
+| -----------            | -----------   | ------------  |
+| Latency Requirement    | “Data is profoundly dumb.” -Dr. Judea Pearl   |  “The biggest lesson that can be read from 70 years of AI research is that general methods that leverage computation are ultimately the most effective, and by a large margin.… Seeking an improvement that makes a difference in the shorter term, researchers seek to leverage their human knowledge of the domain, but the only thing that matters in the long run is the leveraging of computation.” -Professor Richard Sutton|
+| Accuracy Requirement   | "huge computation and a massive amount of data with a simple learning algorithm create incredibly bad learners" -Professor Christopher Manning | "If you want to use data science, a discipline of which ML is a part of, to improve your products or processes, you need to start with building out your data, both in terms of quality and quantity. Without data, there’s no data science." - Dr Monica Rogati |
+
+
+The data science hierarchy of needs emphasized by Dr Monica Rogati is shown below.
+
+![data_science_hierarchy_of_needs](Assets/2-introduction-to-machine-learning-systems-design-assets/data_science_hierachy_of_needs.png)
+
+
+
+
+
+
+
+
+
+
 
 
 
